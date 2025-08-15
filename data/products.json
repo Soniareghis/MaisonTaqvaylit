@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tzr-001",
+    "name": "Fibule Tazarzit — Argent & Émail Ambre",
+    "price": 129.0,
+    "currency": "EUR",
+    "category": "Fibules",
+    "metal": "Argent 925",
+    "enamel_color": "Ambre",
+    "images": [
+      "assets/tzr-001.svg"
+    ],
+    "thumbnail": "assets/tzr-001.svg",
+    "stock": 7,
+    "description": "Pièce emblématique kabyle. Argenterie travaillée à la main, émail couleur ambre, symbolique de protection.",
+    "tags": [
+      "émail",
+      "artisanat",
+      "kabyle"
+    ]
+  }
+]
