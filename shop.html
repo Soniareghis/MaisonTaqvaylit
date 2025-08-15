@@ -1,17 +1,111 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Boutique — MaisonTaqvaylit</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"></head>
-<body data-page="shop"><header><div class="container nav">
-<a class="logo" href="index.html">MaisonTaqvaylit</a>
-<nav>
-  <a href="shop.html" style="font-weight:600;">Boutique</a>
-  <a href="about.html" >Savoir‑faire</a>
-  <a href="faq.html" >FAQ</a>
-  <a href="cart.html" class="btn"><span>Panier</span> <span class="badge" data-cart-count>0</span></a>
-</nav></div></header><main class="container">
-<h1 class="kufi">Boutique</h1>
-<div class="grid" style="grid-template-columns:1fr"><div class="banner"><strong>Filtrer (exemple minimal)</strong> — Tu pourras coder les filtres ensuite dans <code>app.js</code>.</div>
-<div id="grid" class="grid cards"></div></div></main><footer><div class="container" style="padding:2rem 0;border-top:1px solid #e6e2dc;background:#fff;margin-top:3rem">
-<div>© MaisonTaqvaylit — Bijoux berbères, âme contemporaine.</div><div class="muted">Argent 925 • Émail traditionnel • Retours 14 jours</div></div></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutique — MaisonTaqvaylit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="shop">
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html">MaisonTaqvaylit</a>
+      <nav>
+        <a href="shop.html" style="font-weight:600;">Boutique</a>
+        <a href="about.html">Savoir-faire</a>
+        <a href="faq.html">FAQ</a>
+        <a href="cart.html" class="btn"><span>Panier</span> <span class="badge" data-cart-count>0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="breadcrumb">
+      <a href="index.html">Accueil</a> / <span>Boutique</span>
+    </p>
+
+    <section class="category-hero">
+      <h1 class="kufi">Bijoux</h1>
+      <p class="muted">Argent 925, émail traditionnel kabyle et lignes contemporaines.</p>
+    </section>
+
+    <div class="shop-layout">
+      <!-- Sidebar -->
+      <aside class="filters" id="filters">
+        <div class="filter-block">
+          <h3>Catégorie</h3>
+          <label><input type="checkbox" data-filter="category" value="Fibules"> Fibules</label>
+          <label><input type="checkbox" data-filter="category" value="Colliers"> Colliers</label>
+          <label><input type="checkbox" data-filter="category" value="Bagues"> Bagues</label>
+          <label><input type="checkbox" data-filter="category" value="Boucles"> Boucles</label>
+        </div>
+
+        <div class="filter-block">
+          <h3>Métal</h3>
+          <label><input type="checkbox" data-filter="metal" value="Argent 925"> Argent 925</label>
+        </div>
+
+        <div class="filter-block">
+          <h3>Émail</h3>
+          <label><input type="checkbox" data-filter="enamel_color" value="Ambre"> Ambre</label>
+          <label><input type="checkbox" data-filter="enamel_color" value="Turquoise"> Turquoise</label>
+          <label><input type="checkbox" data-filter="enamel_color" value="Rouge"> Rouge</label>
+          <label><input type="checkbox" data-filter="enamel_color" value="Sans émail"> Sans émail</label>
+        </div>
+
+        <div class="filter-block">
+          <h3>Prix</h3>
+          <div class="price-row">
+            <input type="number" id="minPrice" placeholder="Min" min="0">
+            <span>—</span>
+            <input type="number" id="maxPrice" placeholder="Max" min="0">
+          </div>
+          <button class="btn small" id="applyPrice">Appliquer</button>
+        </div>
+
+        <button class="btn clear" id="clearFilters">Réinitialiser</button>
+      </aside>
+
+      <!-- Content -->
+      <section class="results">
+        <div class="toolbar">
+          <div class="left">
+            <span id="resultCount">0 résultats</span>
+            <div id="activeChips" class="chips"></div>
+          </div>
+          <div class="right">
+            <input id="search" class="input" type="search" placeholder="Rechercher un bijou…">
+            <select id="sort" class="select">
+              <option value="featured">Tri : Sélection</option>
+              <option value="price-asc">Prix croissant</option>
+              <option value="price-desc">Prix décroissant</option>
+              <option value="name-asc">Nom A–Z</option>
+              <option value="name-desc">Nom Z–A</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="grid" class="grid cards"></div>
+
+        <div class="pagination">
+          <button class="btn" id="prevPage">Précédent</button>
+          <span id="pageInfo" class="muted"></span>
+          <button class="btn" id="nextPage">Suivant</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">© MaisonTaqvaylit — Bijoux berbères, âme contemporaine.</div>
+      <div class="muted">Argent 925 • Émail traditionnel • Retours 14 jours</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
