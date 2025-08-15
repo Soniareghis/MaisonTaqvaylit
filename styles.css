@@ -20,3 +20,39 @@ header{position:sticky;top:0;background:var(--ivory);border-bottom:1px solid #e6
 .cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:.7rem;align-items:center}
 .muted{opacity:.7}
 .kufi{font-family:Cormorant,serif}
+/* --- Boutique façon “Swarovski-like” --- */
+.breadcrumb { margin: 1rem 0; opacity: .75; }
+.breadcrumb a { text-decoration: underline; }
+
+.category-hero { padding: .5rem 0 1rem; }
+.category-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin: 0; }
+
+.shop-layout { display: grid; grid-template-columns: 260px 1fr; gap: 2rem; }
+@media (max-width: 960px) { .shop-layout { grid-template-columns: 1fr; } }
+
+.filters { position: sticky; top: 72px; align-self: start; background: #fff; border: 1px solid #ece8e1; border-radius: 16px; padding: 1rem; }
+.filter-block + .filter-block { margin-top: 1rem; }
+.filter-block h3 { font-family: Cormorant, serif; font-size: 1.1rem; margin: 0 0 .5rem; }
+.filter-block label { display: flex; align-items: center; gap: .5rem; padding: .25rem 0; cursor: pointer; }
+
+.price-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: .5rem; align-items: center; }
+.btn.small { padding: .5rem .8rem; font-size: .9rem; }
+.btn.clear { width: 100%; margin-top: .8rem; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.input { padding: .6rem .8rem; border: 1px solid #e0ddd7; border-radius: 10px; }
+.select { padding: .6rem .8rem; border: 1px solid #e0ddd7; border-radius: 10px; background: #fff; }
+
+.cards .card { transition: transform .2s ease, box-shadow .2s ease; }
+.cards .card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,.08); }
+.card .info .kufi { font-size: 1rem; }
+.card .info .price { margin-top: .2rem; }
+
+.quickbar { display: flex; justify-content: space-between; align-items: center; padding: .75rem 1rem; border-top: 1px solid #f0ece6; background: #fff; }
+.quickbar .btn { padding: .5rem .8rem; }
+
+.chips { display: flex; gap: .5rem; flex-wrap: wrap; }
+.chip { background: #fff; border: 1px solid #e6e2dc; border-radius: 999px; padding: .25rem .6rem; font-size: .85rem; }
+.chip button { border: 0; background: transparent; margin-left: .4rem; cursor: pointer; }
+
+.pagination { display: flex; gap: 1rem; justify-content: center; align-items: center; margin: 2rem 0 1rem; }
