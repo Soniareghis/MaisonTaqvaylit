@@ -18,5 +18,64 @@
       "artisanat",
       "kabyle"
     ]
+  },
+  {
+    "id": "col-021",
+    "name": "Collier Isefra — Turquoise",
+    "price": 89.0,
+    "currency": "EUR",
+    "category": "Colliers",
+    "metal": "Argent 925",
+    "enamel_color": "Turquoise",
+    "images": [
+      "assets/col-021.svg"
+    ],
+    "thumbnail": "assets/col-021.svg",
+    "stock": 10,
+    "description": "Collier fin inspiré des motifs ⵣ. Idéal au quotidien, pierres synthétiques turquoise.",
+    "tags": [
+      "léger",
+      "quotidien",
+      "turquoise"
+    ]
+  },
+  {
+    "id": "bag-104",
+    "name": "Bague Tifawin — Émail Rouge",
+    "price": 59.0,
+    "currency": "EUR",
+    "category": "Bagues",
+    "metal": "Argent 925",
+    "enamel_color": "Rouge",
+    "images": [
+      "assets/bag-104.svg"
+    ],
+    "thumbnail": "assets/bag-104.svg",
+    "stock": 15,
+    "description": "Bague réglable, émail rouge profond, lignes géométriques traditionnelles revisitées.",
+    "tags": [
+      "émail",
+      "géométrique",
+      "argent"
+    ]
+  },
+  {
+    "id": "bcl-077",
+    "name": "Boucles Itri — Argent Brossé",
+    "price": 69.0,
+    "currency": "EUR",
+    "category": "Boucles",
+    "metal": "Argent 925",
+    "enamel_color": "Sans émail",
+    "images": [
+      "assets/bcl-077.svg"
+    ],
+    "thumbnail": "assets/bcl-077.svg",
+    "stock": 9,
+    "description": "Boucles demi-lune en argent brossé, légères et lumineuses.",
+    "tags": [
+      "argent 925",
+      "minimal"
+    ]
   }
 ]

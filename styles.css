@@ -1,1 +1,22 @@
-body{font-family:sans-serif;background:#F7F3EE;}
+:root{--ivory:#F7F3EE;--anth:#1F1F1F;--sil:#9A9A9A}
+html,body{margin:0;background:var(--ivory);color:var(--anth);font-family:Inter,system-ui,Segoe UI,Roboto}
+.container{width:min(1200px,92%);margin:0 auto}
+header{position:sticky;top:0;background:var(--ivory);border-bottom:1px solid #e6e2dc}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0}
+.logo{font-family:Cormorant,serif;font-size:1.4rem;font-weight:600}
+.grid{display:grid;gap:1rem}
+.cards{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:1rem 0 3rem}
+.card{background:#fff;border:1px solid #ece8e1;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card .info{padding:1rem}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1rem;border-radius:999px;border:1px solid var(--anth);background:#fff}
+.btn.primary{background:var(--anth);color:#fff}
+.hero{padding:4rem 0 2rem}
+.price{font-weight:600}
+.banner{background:linear-gradient(135deg,var(--ivory),#fff);border:1px solid #efe9e2;padding:1rem;border-radius:14px}
+.product-layout{display:grid;gap:2rem}
+@media(min-width:960px){.product-layout{grid-template-columns:1.1fr .9fr}}
+.table{width:100%;border-collapse:collapse}
+.table td,.table th{border-bottom:1px solid #eee;padding:.6rem;text-align:left}
+.cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:.7rem;align-items:center}
+.muted{opacity:.7}
+.kufi{font-family:Cormorant,serif}
